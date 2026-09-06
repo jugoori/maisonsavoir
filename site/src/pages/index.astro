@@ -1,0 +1,758 @@
+---
+import Footer from "../components/Footer.astro";
+import { journalPosts } from "../data/journal.js";
+
+const latestPost = journalPosts[0];
+---
+
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <meta
+      name="description"
+      content="Maison Savoir — Luxury, culture, communication and intelligence."
+    />
+
+    <title>Maison Savoir</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="page header-inner">
+
+        <a href="/" class="brand">
+          MAISON SAVOIR
+        </a>
+
+        <nav>
+          <a href="/">HOME</a>
+          <a href="/about">ABOUT</a>
+          <a href="/journal">JOURNAL</a>
+        </nav>
+
+      </div>
+    </header>
+
+
+    <main>
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="page">
+
+          <div class="hero-kicker">
+            LUXURY · CULTURE · COMMUNICATION · AI
+          </div>
+
+          <h1 class="hero-title">
+            <span>Where Luxury,</span>
+            <span>Culture &amp; Intelligence Converge.</span>
+          </h1>
+
+          <div class="hero-bottom">
+
+            <div class="hero-copy">
+
+              <p class="hero-intro">
+                럭셔리 비즈니스와 브랜드 커뮤니케이션,
+                문화적 감도와 AI가 교차하는 지점을 다루는 프라이빗 아카이브입니다.
+                Maison Savoir는 시대의 흐름 속에서도 변하지 않는 본질을 정제하고,
+                그 안에서 얻은 통찰을 조용히 기록해 나갑니다.
+              </p>
+
+              <a
+                class="hero-link"
+                href="/journal"
+              >
+                EXPLORE JOURNAL →
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- POINT OF VIEW -->
+
+      <section class="manifesto">
+
+        <div class="page">
+
+          <div class="manifesto-label section-label">
+            POINT OF VIEW
+          </div>
+
+          <p class="manifesto-copy">
+            <span class="line">
+              Luxury is not defined by visibility,
+            </span>
+
+            <span class="line">
+              but by precision of meaning.
+            </span>
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- LATEST JOURNAL -->
+
+      <section class="latest">
+
+        <div class="page">
+
+          <div class="latest-head section-label">
+            LATEST JOURNAL
+          </div>
+
+          <a
+            href={latestPost.href}
+            class="latest-row"
+          >
+
+            <span class="latest-volume">
+              {latestPost.volume}
+            </span>
+
+            <span class="latest-title">
+              {latestPost.title}
+            </span>
+
+            <span class="latest-link">
+              READ STORY →
+            </span>
+
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    <Footer />
+
+
+    <style>
+
+      :global(*) {
+        box-sizing: border-box;
+      }
+
+
+      :global(html) {
+        scroll-behavior: smooth;
+      }
+
+
+      :global(body) {
+        margin: 0;
+
+        background: #f4f1ea;
+
+        color: #11110f;
+
+        font-family:
+          Arial,
+          Helvetica,
+          sans-serif;
+
+        -webkit-font-smoothing:
+          antialiased;
+      }
+
+
+      :global(a) {
+        color: inherit;
+        text-decoration: none;
+      }
+
+
+      :root {
+        --bg: #f4f1ea;
+        --text: #11110f;
+        --muted: #6f6a63;
+        --body: #514d47;
+        --line: rgba(17, 17, 15, 0.18);
+      }
+
+
+      /* PAGE */
+
+      .page {
+        width:
+          min(
+            1220px,
+            calc(100% - 72px)
+          );
+
+        margin:
+          0 auto;
+      }
+
+
+      /* HEADER */
+
+      header {
+        border-bottom:
+          1px solid var(--line);
+      }
+
+
+      .header-inner {
+        min-height:
+          110px;
+
+        display:
+          flex;
+
+        justify-content:
+          space-between;
+
+        align-items:
+          center;
+      }
+
+
+      .brand {
+        font-family:
+          Georgia,
+          "Times New Roman",
+          serif;
+
+        font-size:
+          18px;
+
+        letter-spacing:
+          0.025em;
+      }
+
+
+      nav {
+        display:
+          flex;
+
+        gap:
+          34px;
+
+        font-size:
+          11px;
+
+        letter-spacing:
+          0.16em;
+      }
+
+
+      /* HERO */
+
+      .hero {
+        padding:
+          92px 0 78px;
+      }
+
+
+      .hero-kicker {
+        margin-bottom:
+          34px;
+
+        color:
+          var(--muted);
+
+        font-size:
+          11px;
+
+        letter-spacing:
+          0.22em;
+      }
+
+
+      .hero-title {
+        max-width:
+          1160px;
+
+        margin:
+          0;
+
+        font-family:
+          Georgia,
+          "Times New Roman",
+          serif;
+
+        font-size:
+          clamp(
+            70px,
+            8vw,
+            122px
+          );
+
+        font-weight:
+          400;
+
+        line-height:
+          0.9;
+
+        letter-spacing:
+          -0.055em;
+      }
+
+
+      .hero-title span {
+        display:
+          block;
+      }
+
+
+      .hero-bottom {
+        display:
+          grid;
+
+        grid-template-columns:
+          0.56fr 0.44fr;
+
+        gap:
+          100px;
+
+        margin-top:
+          58px;
+      }
+
+
+      .hero-copy {
+        max-width:
+          540px;
+      }
+
+
+      .hero-intro {
+        margin:
+          0;
+
+        color:
+          var(--body);
+
+        font-size:
+          16px;
+
+        line-height:
+          2;
+
+        word-break:
+          keep-all;
+      }
+
+
+      .hero-link {
+        display:
+          inline-block;
+
+        margin-top:
+          32px;
+
+        padding-bottom:
+          6px;
+
+        border-bottom:
+          1px solid var(--text);
+
+        font-size:
+          10px;
+
+        letter-spacing:
+          0.16em;
+      }
+
+
+      /* POINT OF VIEW */
+
+      .manifesto {
+        padding:
+          68px 0 82px;
+
+        border-top:
+          1px solid var(--line);
+      }
+
+
+      .section-label {
+        color:
+          var(--muted);
+
+        font-size:
+          11px;
+
+        letter-spacing:
+          0.2em;
+
+        text-transform:
+          uppercase;
+      }
+
+
+      .manifesto-label {
+        margin-bottom:
+          26px;
+      }
+
+
+      .manifesto-copy {
+        max-width:
+          900px;
+
+        margin:
+          0;
+
+        font-family:
+          Georgia,
+          "Times New Roman",
+          serif;
+
+        font-size:
+          clamp(
+            38px,
+            4.55vw,
+            62px
+          );
+
+        font-weight:
+          400;
+
+        line-height:
+          1.04;
+
+        letter-spacing:
+          -0.035em;
+      }
+
+
+      .manifesto-copy .line {
+        display:
+          block;
+
+        white-space:
+          nowrap;
+      }
+
+
+      /* LATEST JOURNAL */
+
+      .latest {
+        padding:
+          36px 0 60px;
+
+        border-top:
+          1px solid var(--line);
+      }
+
+
+      .latest-head {
+        margin-bottom:
+          22px;
+      }
+
+
+      .latest-row {
+        display:
+          grid;
+
+        grid-template-columns:
+          130px 1fr 110px;
+
+        gap:
+          36px;
+
+        align-items:
+          center;
+
+        padding:
+          24px 0;
+
+        border-top:
+          1px solid var(--line);
+
+        border-bottom:
+          1px solid var(--line);
+
+        transition:
+          opacity 0.2s ease;
+      }
+
+
+      .latest-row:hover {
+        opacity:
+          0.55;
+      }
+
+
+      .latest-volume {
+        color:
+          var(--muted);
+
+        font-size:
+          10px;
+
+        letter-spacing:
+          0.15em;
+      }
+
+
+      .latest-title {
+        font-family:
+          Georgia,
+          "Times New Roman",
+          serif;
+
+        font-size:
+          clamp(
+            25px,
+            2.6vw,
+            38px
+          );
+
+        line-height:
+          1.2;
+
+        letter-spacing:
+          -0.02em;
+
+        word-break:
+          keep-all;
+      }
+
+
+      .latest-link {
+        text-align:
+          right;
+
+        font-size:
+          10px;
+
+        letter-spacing:
+          0.13em;
+
+        white-space:
+          nowrap;
+      }
+
+
+      /* FOOTER */
+
+      footer {
+        padding:
+          24px 0 38px;
+
+        border-top:
+          1px solid var(--line);
+      }
+
+
+      .footer-inner {
+        display:
+          flex;
+
+        justify-content:
+          space-between;
+
+        color:
+          var(--muted);
+
+        font-size:
+          10px;
+
+        letter-spacing:
+          0.15em;
+      }
+
+
+      /* TABLET */
+
+      @media (max-width: 900px) {
+
+        .page {
+          width:
+            min(
+              100% - 40px,
+              1220px
+            );
+        }
+
+
+        .hero-bottom {
+          grid-template-columns:
+            1fr;
+
+          gap:
+            0;
+        }
+
+
+        .manifesto-copy .line {
+          white-space:
+            normal;
+        }
+
+
+        .latest-row {
+          grid-template-columns:
+            110px 1fr auto;
+
+          gap:
+            24px;
+        }
+
+      }
+
+
+      /* MOBILE */
+
+      @media (max-width: 600px) {
+
+        .page {
+          width:
+            calc(
+              100% - 28px
+            );
+        }
+
+
+        header {
+          padding:
+            26px 0 22px;
+        }
+
+
+        .header-inner {
+          display:
+            block;
+
+          min-height:
+            auto;
+        }
+
+
+        nav {
+          margin-top:
+            20px;
+
+          justify-content:
+            space-between;
+
+          gap:
+            18px;
+        }
+
+
+        .hero {
+          padding:
+            60px 0 58px;
+        }
+
+
+        .hero-kicker {
+          margin-bottom:
+            24px;
+        }
+
+
+        .hero-title {
+          font-size:
+            clamp(
+              54px,
+              17vw,
+              78px
+            );
+
+          line-height:
+            0.95;
+        }
+
+
+        .hero-bottom {
+          margin-top:
+            42px;
+        }
+
+
+        .hero-intro {
+          font-size:
+            15px;
+
+          line-height:
+            1.9;
+        }
+
+
+        .manifesto {
+          padding:
+            54px 0 62px;
+        }
+
+
+        .manifesto-copy {
+          font-size:
+            36px;
+        }
+
+
+        .latest {
+          padding:
+            32px 0 48px;
+        }
+
+
+        .latest-row {
+          grid-template-columns:
+            1fr;
+
+          gap:
+            10px;
+
+          padding:
+            20px 0;
+        }
+
+
+        .latest-title {
+          font-size:
+            24px;
+        }
+
+
+        .latest-link {
+          text-align:
+            left;
+
+          margin-top:
+            6px;
+        }
+
+
+        .footer-inner {
+          flex-direction:
+            column;
+
+          gap:
+            20px;
+        }
+
+      }
+
+    </style>
+
+  </body>
+</html>
