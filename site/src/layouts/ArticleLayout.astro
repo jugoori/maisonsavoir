@@ -13,6 +13,7 @@ const {
   references = [],
 } = Astro.props;
 ---
+
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -28,6 +29,21 @@ const {
     />
 
     <title>{volume} — {title} | Maison Savoir</title>
+
+    <!-- Korean typography -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -76,29 +92,30 @@ const {
       <!-- HERO IMAGE -->
 
       {
-  heroImage && (
-    <section class="article-hero">
-      <div class="page">
+        heroImage && (
+          <section class="article-hero">
+            <div class="page">
 
-        <figure>
+              <figure>
 
-          <img
-            src={heroImage}
-            alt={heroAlt}
-          />
+                <img
+                  src={heroImage}
+                  alt={heroAlt}
+                />
 
-          {heroCaption && (
-            <figcaption>
-              {heroCaption}
-            </figcaption>
-          )}
+                {heroCaption && (
+                  <figcaption>
+                    {heroCaption}
+                  </figcaption>
+                )}
 
-        </figure>
+              </figure>
 
-      </div>
-    </section>
-  )
-}
+            </div>
+          </section>
+        )
+      }
+
 
       <!-- ARTICLE BODY -->
 
@@ -296,33 +313,42 @@ const {
       }
 
 
+      /*
+         ARTICLE TITLE
+
+         Noto Serif KR is used for Korean typography.
+         The size is intentionally reduced from the previous
+         version to create a more restrained editorial feeling.
+      */
+
       .article-title {
         max-width:
-          1120px;
+          1080px;
 
         margin:
           0;
 
         font-family:
+          "Noto Serif KR",
           Georgia,
           "Times New Roman",
           serif;
 
         font-size:
           clamp(
-            52px,
-            5.6vw,
-            82px
+            48px,
+            4.7vw,
+            68px
           );
 
         font-weight:
           400;
 
         line-height:
-          1.04;
+          1.12;
 
         letter-spacing:
-          -0.04em;
+          -0.035em;
 
         word-break:
           keep-all;
@@ -434,8 +460,17 @@ const {
         color:
           var(--body);
 
+        font-family:
+          "Noto Sans KR",
+          Arial,
+          Helvetica,
+          sans-serif;
+
         font-size:
           16px;
+
+        font-weight:
+          400;
 
         line-height:
           2.05;
@@ -455,6 +490,7 @@ const {
           66px 0 26px;
 
         font-family:
+          "Noto Serif KR",
           Georgia,
           "Times New Roman",
           serif;
@@ -467,10 +503,10 @@ const {
           );
 
         font-weight:
-          400;
+          500;
 
         line-height:
-          1.22;
+          1.35;
 
         letter-spacing:
           -0.025em;
@@ -490,6 +526,7 @@ const {
           52px 0 18px;
 
         font-family:
+          "Noto Serif KR",
           Georgia,
           "Times New Roman",
           serif;
@@ -501,7 +538,7 @@ const {
           600;
 
         line-height:
-          1.35;
+          1.5;
 
         letter-spacing:
           -0.015em;
@@ -548,6 +585,7 @@ const {
           var(--text) !important;
 
         font-family:
+          "Noto Serif KR",
           Georgia,
           "Times New Roman",
           serif;
@@ -563,7 +601,7 @@ const {
           400;
 
         line-height:
-          1.45 !important;
+          1.55 !important;
 
         letter-spacing:
           -0.025em;
@@ -583,6 +621,7 @@ const {
           var(--text) !important;
 
         font-family:
+          "Noto Serif KR",
           Georgia,
           "Times New Roman",
           serif;
@@ -594,7 +633,7 @@ const {
           600;
 
         line-height:
-          1.5 !important;
+          1.6 !important;
 
         letter-spacing:
           -0.015em;
@@ -620,18 +659,19 @@ const {
           var(--muted);
 
         font-family:
-          Georgia,
-          "Times New Roman",
-          serif;
+          "Noto Sans KR",
+          Arial,
+          Helvetica,
+          sans-serif;
 
         font-size:
           12px;
 
         font-style:
-          italic;
+          normal;
 
         line-height:
-          1.75;
+          1.85;
       }
 
 
@@ -680,9 +720,9 @@ const {
           var(--muted) !important;
 
         font-family:
-          Georgia,
-          "Times New Roman",
-          serif;
+          Arial,
+          Helvetica,
+          sans-serif;
 
         font-size:
           13px !important;
@@ -852,13 +892,13 @@ const {
         .article-title {
           font-size:
             clamp(
-              40px,
-              11.5vw,
-              58px
+              38px,
+              10vw,
+              48px
             );
 
           line-height:
-            1.04;
+            1.12;
 
           letter-spacing:
             -0.035em;
@@ -899,7 +939,7 @@ const {
             15px;
 
           line-height:
-            1.95;
+            2;
         }
 
 
@@ -911,7 +951,7 @@ const {
             29px;
 
           line-height:
-            1.25;
+            1.4;
         }
 
 
@@ -921,6 +961,9 @@ const {
 
           font-size:
             21px;
+
+          line-height:
+            1.5;
         }
 
 
@@ -942,6 +985,9 @@ const {
         .article-body :global(blockquote p) {
           font-size:
             26px !important;
+
+          line-height:
+            1.55 !important;
         }
 
 
@@ -953,7 +999,7 @@ const {
             21px !important;
 
           line-height:
-            1.5 !important;
+            1.6 !important;
         }
 
 
