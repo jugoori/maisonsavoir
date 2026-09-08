@@ -1,5 +1,13 @@
 export const journalPosts = [
   {
+    volume: "VOL.11",
+    title: "종이의 무게, 메종의 서재: 럭셔리는 왜 다시 책장을 큐레이션하는가?",
+    subtitle: "초 단위로 쏟아지는 디지털 피로감 속에서, 책을 펼쳐 드는 '시간의 여유'",
+    date: "2026.09.24",
+    href: "/journal/vol-11",
+    image: "/images/vol-11-hero.jpg",
+  },
+  {
     volume: "VOL.10",
     title: "미슐랭의 스티치, 메종의 미학: 패션 하우스는 왜 '입맛'을 디렉팅하는가?",
     subtitle: "알고리즘이 계산할 수 없는 '미각', 그리고 공간을 지배하는 셰프의 아우라",
