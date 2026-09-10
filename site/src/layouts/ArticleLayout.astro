@@ -105,6 +105,10 @@ if (currentIndex !== -1) {
       <section class="article-header">
         <div class="page">
 
+          <a href="/journal" class="article-back">
+            ← BACK
+          </a>
+
           <div class="article-meta">
             <span>{volume}</span>
             <span>{date}</span>
@@ -374,6 +378,23 @@ if (currentIndex !== -1) {
       .article-header {
         padding:
           82px 0 58px;
+      }
+
+      .article-back {
+        display: inline-block;
+        margin-bottom: 24px;
+        padding-bottom: 3px;
+        border-bottom: 1px solid rgba(17, 17, 15, 0.25);
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        transition: border-color 0.2s ease, color 0.2s ease;
+      }
+
+      .article-back:hover {
+        color: var(--text);
+        border-bottom-color: var(--text);
       }
 
 
@@ -956,13 +977,18 @@ if (currentIndex !== -1) {
 
         .article-header {
           padding:
-            52px 0 40px;
+            42px 0 34px;
+        }
+
+        .article-back {
+          margin-bottom: 18px;
+          padding-bottom: 3px;
         }
 
 
         .article-meta {
           margin-bottom:
-            26px;
+            22px;
         }
 
 
