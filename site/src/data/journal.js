@@ -41,7 +41,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.06",
-    title: "럭셔리의 완성: '판매'가 아닌 '시간'을 마케팅하다",
+    title: "럭셔리의 완성, '판매'가 아닌 '시간'을 마케팅하다",
     subtitle: "구매 이후 시작되는 브랜드와 고객의 깊은 유대감",
     date: "2026.07.02",
     href: "/journal/vol-06",
