@@ -9,7 +9,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.10",
-    title: "미슐랭의 스티치, 메종의 미학: 패션 하우스는 왜 '입맛'을 디렉팅하는가",
+    title: "미슐랭의 스티치, 메종의 미학, 패션 하우스는 왜 '입맛'을 디렉팅하는가",
     subtitle: "알고리즘이 계산할 수 없는 '미각', 그리고 공간을 지배하는 셰프의 아우라",
     date: "2026.09.10",
     href: "/journal/vol-10",
@@ -33,7 +33,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.07",
-    title: "기술이 화려해질수록 선명해지는 것: 하이엔드의 '공간' 전략",
+    title: "기술이 화려해질수록 선명해지는 것, 하이엔드의 '공간' 전략",
     subtitle: "AI 시대, 브랜드의 감도와 휴먼 터치가 머무는 무대",
     date: "2026.07.09",
     href: "/journal/vol-07",
