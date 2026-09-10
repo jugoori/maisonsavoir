@@ -190,9 +190,9 @@ if (currentIndex !== -1) {
 
         {
           surroundingPosts.length > 0 && (
-            <section style="margin-top: 50px; padding-top: 26px; border-top: 1px solid rgba(17, 17, 15, 0.18);">
+            <section style="margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(17, 17, 15, 0.18);">
 
-              <h4 style="margin: 0 0 18px; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; font-weight: 400; font-style: italic; color: #11110f;">
+              <h4 style="margin: 0 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: 20px; font-weight: 400; font-style: italic; color: #11110f;">
                 More from the Journal
               </h4>
 
@@ -202,28 +202,28 @@ if (currentIndex !== -1) {
                     const isCurrent = cleanVol(post.volume) === curVolClean || post.title === title;
                     return (
                       <tr style="border-bottom: 1px solid rgba(17, 17, 15, 0.18);">
-                        <td style="width: 95px; padding: 12px 0; font-family: Georgia, serif; font-size: 9px; font-style: italic; letter-spacing: 0.14em; color: #6f6a63; vertical-align: middle; white-space: nowrap;">
+                        <td style="width: 110px; padding: 18px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 10px; font-style: italic; letter-spacing: 0.14em; color: #6f6a63; vertical-align: middle; white-space: nowrap;">
                           {post.volume}
                         </td>
-                        <td style="padding: 12px 14px; vertical-align: middle;">
+                        <td style="padding: 18px 16px; vertical-align: middle;">
                           {isCurrent ? (
-                            <span style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 13px; font-style: italic; line-height: 1.45; color: #6f6a63; letter-spacing: -0.015em; word-break: keep-all;">
+                            <span style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 15.5px; font-style: italic; line-height: 1.45; color: #6f6a63; letter-spacing: -0.015em; word-break: keep-all;">
                               {post.title}
                             </span>
                           ) : (
-                            <a href={post.href} style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 13px; font-style: italic; line-height: 1.45; color: #11110f; letter-spacing: -0.015em; word-break: keep-all; text-decoration: none;">
+                            <a href={post.href} style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 15.5px; font-style: italic; line-height: 1.45; color: #11110f; letter-spacing: -0.015em; word-break: keep-all; text-decoration: none;">
                               {post.title}
                             </a>
                           )}
                         </td>
-                        <td style="width: 65px; padding: 12px 0; text-align: right; vertical-align: middle; white-space: nowrap;">
+                        <td style="width: 85px; padding: 18px 0; text-align: right; vertical-align: middle; white-space: nowrap;">
                           {isCurrent ? (
-                            <span style="font-family: Georgia, serif; font-size: 8px; font-style: italic; letter-spacing: 0.15em; color: #6f6a63; font-weight: 500;">
+                            <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 8px; font-style: italic; letter-spacing: 0.16em; color: #6f6a63; font-weight: 500;">
                               CURRENT
                             </span>
                           ) : (
-                            <a href={post.href} style="font-family: Georgia, serif; font-size: 8.5px; font-style: italic; letter-spacing: 0.14em; color: #11110f; text-decoration: none;">
-                              READ →
+                            <a href={post.href} style="font-family: Georgia, 'Times New Roman', serif; font-size: 8.5px; font-style: italic; letter-spacing: 0.12em; color: #6f6a63; text-decoration: none;">
+                              {post.date}
                             </a>
                           )}
                         </td>
