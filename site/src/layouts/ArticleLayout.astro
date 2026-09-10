@@ -190,37 +190,39 @@ if (currentIndex !== -1) {
         }
 
 
-        <!-- MORE FROM THE JOURNAL -->
+        <!-- MORE FROM THE JOURNAL (SUBTLE DIVIDERS: 0.08) -->
 
         {
           surroundingPosts.length > 0 && (
-            <section style="margin-top: 56px; padding-top: 32px; border-top: 1px solid rgba(17, 17, 15, 0.18);">
+            <section style="margin-top: 48px; padding-top: 24px; border-top: 1px solid rgba(17, 17, 15, 0.18);">
 
-              <h4 style="margin: 0 0 24px; font-family: Georgia, 'Times New Roman', serif; font-size: 20px; font-weight: 400; font-style: italic; color: #11110f;">
+              <h4 style="margin: 0 0 14px; font-family: Georgia, 'Times New Roman', serif; font-size: 18px; font-weight: 400; font-style: italic; color: #11110f;">
                 More from the Journal
               </h4>
 
               <table style="width: 100%; border-collapse: collapse; border-top: 1px solid rgba(17, 17, 15, 0.18); table-layout: fixed;">
                 <tbody>
-                  {surroundingPosts.map((post) => {
+                  {surroundingPosts.map((post, idx) => {
                     const isCurrent = cleanVol(post.volume) === curVolClean || post.title === title;
+                    const isLast = idx === surroundingPosts.length - 1;
+                    const bottomBorder = isLast ? '1px solid rgba(17, 17, 15, 0.18)' : '1px solid rgba(17, 17, 15, 0.08)';
                     return (
-                      <tr style="border-bottom: 1px solid rgba(17, 17, 15, 0.18);">
-                        <td style="width: 110px; padding: 18px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 10px; font-style: italic; letter-spacing: 0.14em; color: #6f6a63; vertical-align: middle; white-space: nowrap;">
+                      <tr style={`border-bottom: ${bottomBorder};`}>
+                        <td style="width: 100px; padding: 8px 0; font-family: Georgia, 'Times New Roman', serif; font-size: 9.5px; font-style: italic; letter-spacing: 0.14em; color: #6f6a63; vertical-align: middle; white-space: nowrap;">
                           {post.volume}
                         </td>
-                        <td style="padding: 18px 16px; vertical-align: middle;">
+                        <td style="padding: 8px 12px; vertical-align: middle;">
                           {isCurrent ? (
-                            <span style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 15.5px; font-style: italic; line-height: 1.45; color: #6f6a63; letter-spacing: -0.015em; word-break: keep-all;">
+                            <span style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 14px; font-style: italic; line-height: 1.35; color: #6f6a63; letter-spacing: -0.015em; word-break: keep-all;">
                               {post.title}
                             </span>
                           ) : (
-                            <a href={post.href} style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 15.5px; font-style: italic; line-height: 1.45; color: #11110f; letter-spacing: -0.015em; word-break: keep-all; text-decoration: none;">
+                            <a href={post.href} style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 14px; font-style: italic; line-height: 1.35; color: #11110f; letter-spacing: -0.015em; word-break: keep-all; text-decoration: none;">
                               {post.title}
                             </a>
                           )}
                         </td>
-                        <td style="width: 85px; padding: 18px 0; text-align: right; vertical-align: middle; white-space: nowrap;">
+                        <td style="width: 85px; padding: 8px 0; text-align: right; vertical-align: middle; white-space: nowrap;">
                           {isCurrent ? (
                             <span style="font-family: Georgia, 'Times New Roman', serif; font-size: 8px; font-style: italic; letter-spacing: 0.16em; color: #6f6a63; font-weight: 500;">
                               CURRENT
