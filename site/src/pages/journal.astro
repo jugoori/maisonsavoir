@@ -175,13 +175,13 @@ const archive = journalPosts.slice(1);
           </div>
 
 
-          <div class="archive-list">
+          <div class="archive-list" id="archive-list">
 
             {
-              archive.map((article) => (
+              archive.map((article, index) => (
 
                 <a
-                  class="archive-row"
+                  class={`archive-row ${index >= 10 ? "is-hidden" : ""}`}
                   href={article.href}
                 >
 
@@ -206,6 +206,16 @@ const archive = journalPosts.slice(1);
 
           </div>
 
+          {
+            archive.length > 10 && (
+              <div class="archive-more-wrap">
+                <button type="button" id="load-more-btn" class="archive-more-btn">
+                  LOAD MORE ARCHIVES +
+                </button>
+              </div>
+            )
+          }
+
         </div>
 
       </section>
@@ -214,6 +224,19 @@ const archive = journalPosts.slice(1);
 
 
     <Footer />
+
+    <script>
+      const loadMoreBtn = document.getElementById("load-more-btn");
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener("click", () => {
+          const hiddenRows = document.querySelectorAll(".archive-row.is-hidden");
+          hiddenRows.forEach((row) => {
+            row.classList.remove("is-hidden");
+          });
+          loadMoreBtn.parentElement?.remove();
+        });
+      }
+    </script>
 
 
     <style>
@@ -642,6 +665,10 @@ const archive = journalPosts.slice(1);
           opacity 0.2s ease;
       }
 
+      .archive-row.is-hidden {
+        display: none !important;
+      }
+
 
       .archive-row:hover {
         opacity:
@@ -706,6 +733,31 @@ const archive = journalPosts.slice(1);
 
         white-space:
           nowrap;
+      }
+
+      /* LOAD MORE */
+
+      .archive-more-wrap {
+        display: flex;
+        justify-content: center;
+        padding-top: 42px;
+      }
+
+      .archive-more-btn {
+        background: none;
+        border: none;
+        border-bottom: 1px solid var(--text);
+        padding: 0 0 6px 0;
+        cursor: pointer;
+        color: var(--text);
+        font-family: Arial, "Noto Sans KR", Helvetica, sans-serif;
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        transition: opacity 0.2s ease;
+      }
+
+      .archive-more-btn:hover {
+        opacity: 0.55;
       }
 
 
@@ -948,6 +1000,10 @@ const archive = journalPosts.slice(1);
         .archive-date {
           margin-top:
             2px;
+        }
+
+        .archive-more-wrap {
+          padding-top: 32px;
         }
 
 

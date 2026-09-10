@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import { journalPosts } from "../data/journal.js";
 
 const {
   volume,
@@ -16,6 +17,20 @@ const {
 const ogImageUrl = heroImage
   ? (heroImage.startsWith("http") ? heroImage : `https://archivesintimes.com${heroImage}`)
   : "https://archivesintimes.com/og-image.png";
+
+const cleanVol = (v) => (v || "").replace(/\s+/g, "").toUpperCase();
+const curVolClean = cleanVol(volume);
+
+const currentIndex = journalPosts.findIndex(
+  (post) => cleanVol(post.volume) === curVolClean || post.title === title
+);
+
+let surroundingPosts = [];
+if (currentIndex !== -1) {
+  const startIndex = Math.max(0, currentIndex - 2);
+  const endIndex = Math.min(journalPosts.length, currentIndex + 3);
+  surroundingPosts = journalPosts.slice(startIndex, endIndex);
+}
 ---
 
 <html lang="ko">
@@ -166,6 +181,58 @@ const ogImageUrl = heroImage
               ))}
 
             </div>
+          )
+        }
+
+
+        <!-- MORE FROM THE JOURNAL -->
+
+        {
+          surroundingPosts.length > 0 && (
+            <section style="margin-top: 50px; padding-top: 26px; border-top: 1px solid rgba(17, 17, 15, 0.18);">
+
+              <h4 style="margin: 0 0 18px; font-family: Georgia, 'Times New Roman', serif; font-size: 17px; font-weight: 400; font-style: italic; color: #11110f;">
+                More from the Journal
+              </h4>
+
+              <table style="width: 100%; border-collapse: collapse; border-top: 1px solid rgba(17, 17, 15, 0.18); table-layout: fixed;">
+                <tbody>
+                  {surroundingPosts.map((post) => {
+                    const isCurrent = cleanVol(post.volume) === curVolClean || post.title === title;
+                    return (
+                      <tr style="border-bottom: 1px solid rgba(17, 17, 15, 0.18);">
+                        <td style="width: 95px; padding: 12px 0; font-family: Georgia, serif; font-size: 9px; font-style: italic; letter-spacing: 0.14em; color: #6f6a63; vertical-align: middle; white-space: nowrap;">
+                          {post.volume}
+                        </td>
+                        <td style="padding: 12px 14px; vertical-align: middle;">
+                          {isCurrent ? (
+                            <span style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 13px; font-style: italic; line-height: 1.45; color: #6f6a63; letter-spacing: -0.015em; word-break: keep-all;">
+                              {post.title}
+                            </span>
+                          ) : (
+                            <a href={post.href} style="display: block; font-family: 'Noto Serif KR', Georgia, serif; font-size: 13px; font-style: italic; line-height: 1.45; color: #11110f; letter-spacing: -0.015em; word-break: keep-all; text-decoration: none;">
+                              {post.title}
+                            </a>
+                          )}
+                        </td>
+                        <td style="width: 65px; padding: 12px 0; text-align: right; vertical-align: middle; white-space: nowrap;">
+                          {isCurrent ? (
+                            <span style="font-family: Georgia, serif; font-size: 8px; font-style: italic; letter-spacing: 0.15em; color: #6f6a63; font-weight: 500;">
+                              CURRENT
+                            </span>
+                          ) : (
+                            <a href={post.href} style="font-family: Georgia, serif; font-size: 8.5px; font-style: italic; letter-spacing: 0.14em; color: #11110f; text-decoration: none;">
+                              READ →
+                            </a>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+
+            </section>
           )
         }
 
@@ -329,14 +396,6 @@ const ogImageUrl = heroImage
           0.18em;
       }
 
-
-      /*
-         ARTICLE TITLE
-
-         Noto Serif KR is used for Korean typography.
-         The size is intentionally reduced from the previous
-         version to create a more restrained editorial feeling.
-      */
 
       .article-title {
         max-width:
