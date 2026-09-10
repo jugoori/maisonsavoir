@@ -1,7 +1,7 @@
 export const journalPosts = [
   {
     volume: "VOL.11",
-    title: "종이의 무게, 메종의 서재: 럭셔리는 왜 다시 책장을 큐레이션하는가?",
+    title: "스마트폰 너머, 럭셔리 메종이 책장에 공을 들이는 이유",
     subtitle: "초 단위로 쏟아지는 디지털 피로감 속에서, 책을 펼쳐 드는 '시간의 여유'",
     date: "2026.09.24",
     href: "/journal/vol-11",
@@ -9,7 +9,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.10",
-    title: "미슐랭의 스티치, 메종의 미학: 패션 하우스는 왜 '입맛'을 디렉팅하는가?",
+    title: "미슐랭의 스티치, 메종의 미학: 패션 하우스는 왜 '입맛'을 디렉팅하는가",
     subtitle: "알고리즘이 계산할 수 없는 '미각', 그리고 공간을 지배하는 셰프의 아우라",
     date: "2026.09.10",
     href: "/journal/vol-10",
@@ -26,7 +26,7 @@ export const journalPosts = [
   {
     volume: "VOL.08",
     title: "AI가 따라 할 수 없는 문화적 안목의 힘",
-    subtitle: "생성형 알고리즘이 흉내 낼 수 없는 디렉팅의 한 끗 차이.",
+    subtitle: "생성형 알고리즘이 흉내 낼 수 없는 디렉팅의 한 끗 차이",
     date: "2026.08.13",
     href: "/journal/vol-08",
     image: "/images/vol-08-hero.jpg",
@@ -41,7 +41,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.06",
-    title: "럭셔리의 완성: '판매'가 아닌 '시간'을 마케팅하다.",
+    title: "럭셔리의 완성: '판매'가 아닌 '시간'을 마케팅하다",
     subtitle: "구매 이후 시작되는 브랜드와 고객의 깊은 유대감",
     date: "2026.07.02",
     href: "/journal/vol-06",
@@ -49,7 +49,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.05",
-    title: "로고가 사라진 자리, 브랜드는 무엇으로 증명되는가?",
+    title: "로고가 사라진 자리, 브랜드는 무엇으로 증명되는가",
     subtitle: "소리 없이 압도하는 '보이지 않는 인장(Invisible Signature)'",
     date: "2026.06.25",
     href: "/journal/vol-05",
@@ -57,7 +57,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.04",
-    title: "Old Money의 유산, 어떻게 '젊은 럭셔리'의 심장을 뛰게 하는가?",
+    title: "Old Money의 유산, 어떻게 '젊은 럭셔리'의 심장을 뛰게 하는가",
     subtitle: "헤리티지라는 견고한 틀 안에 담아내는, 알고리즘 너머의 감성",
     date: "2026.06.18",
     href: "/journal/vol-04",
@@ -65,7 +65,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.03",
-    title: "하이엔드 메종의 Digitalization, '프라이빗'의 경계는 어디인가?",
+    title: "하이엔드 메종의 Digitalization, '프라이빗'의 경계는 어디인가",
     subtitle: "디지털이라는 그릇에 담아내는 메종의 환대(Hospitality)",
     date: "2026.06.11",
     href: "/journal/vol-03",
@@ -73,7 +73,7 @@ export const journalPosts = [
   },
   {
     volume: "SPECIAL VOL.",
-    title: "악마는 이제 알고리즘을 입는다.",
+    title: "악마는 이제 알고리즘을 입는다",
     subtitle: "데이터가 넘볼 수 없는 '미란다 프리슬리'의 마지막 한 끗",
     date: "2026.06.04",
     href: "/journal/special-01",
@@ -89,7 +89,7 @@ export const journalPosts = [
   },
   {
     volume: "VOL.01",
-    title: "LVMH는 왜 AI를 '장인'이라 부르는가?",
+    title: "LVMH는 왜 AI를 '장인'이라 부르는가",
     subtitle: "럭셔리의 온도는 어디에서 시작되는가",
     date: "2026.05.21",
     href: "/journal/vol-01",
