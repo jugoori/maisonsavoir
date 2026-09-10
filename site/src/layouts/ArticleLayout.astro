@@ -12,6 +12,10 @@ const {
   tags = [],
   references = [],
 } = Astro.props;
+
+const ogImageUrl = heroImage
+  ? (heroImage.startsWith("http") ? heroImage : `https://archivesintimes.com${heroImage}`)
+  : "https://archivesintimes.com/og-image.png";
 ---
 
 <html lang="ko">
@@ -30,6 +34,18 @@ const {
 
     <title>{volume} — {title} | Archives Intimes</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Open Graph / Facebook / KakaoTalk -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={`${volume} — ${title} | Archives Intimes`} />
+    <meta property="og:description" content={subtitle} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${volume} — ${title} | Archives Intimes`} />
+    <meta name="twitter:description" content={subtitle} />
+    <meta name="twitter:image" content={ogImageUrl} />
 
     <!-- Korean typography -->
     <link
