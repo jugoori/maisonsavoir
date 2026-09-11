@@ -1,12 +1,11 @@
 export const journalPosts = [
-  {
+    {
     volume: "VOL.12",
     title: "완벽한 새것 대신, 낡아가는 시간을 파는 메종들",
+    subtitle: "패션 위크의 소음 너머, 가죽 냄새 짙던 마베프 아틀리에에서 마주한 시간의 깊이와 메종의 수선 철학.",
     date: "2026.10.08",
     href: "/journal/vol-12",
-    description:
-      "패션 위크의 소음 너머, 가죽 냄새 짙던 마베프 아틀리에에서 마주한 시간의 깊이와 메종의 수선 철학.",
-    heroImage: "/images/vol-12-hero.jpg",
+    image: "/images/vol-12-hero.jpg",
   },
   {
     volume: "VOL.11",
