@@ -1,35 +1,38 @@
 ---
 import ArticleLayout from "../../layouts/ArticleLayout.astro";
 
-const post = {
-  volume: "VOL.12",
-  date: "2026.10.08",
-  title: "완벽한 새것 대신, 낡아가는 시간을 파는 메종들",
-  subtitle:
-    "패션 위크의 소음 너머, 가죽 냄새 짙던 마베프 아틀리에에서 마주한 시간의 깊이와 메종의 수선 철학.",
-  heroImage: "/images/vol-12-hero.jpg",
-  heroAlt: "Atelier repair craftsmanship and leather patina",
-  heroCaption:
-    "시간의 주름을 간직한 가죽과 장인의 손길, 파리 마베프 거리의 비스포크 아틀리에.",
-  tags: [
-    "럭셔리마케팅",
-    "보테가베네타",
-    "브랜드전략",
-    "비스포크워크샵",
-    "에르메스장인",
-    "오라블록체인",
-    "파리패션위크",
-  ],
-  references: [
-    "The Business of Fashion (BoF): Sustainability - Why Luxury Brands Are Banking on Care and Repair",
-    "Vogue Business: Technology - How Digital Product Passports Are Transforming Luxury Craftsmanship",
-    "LVMH Corporate: Heritage & Innovation - Aura Blockchain: Tracing Authenticity and Craftsmanship",
-  ],
-};
+const references = [
+  "The Business of Fashion (BoF): Sustainability - Why Luxury Brands Are Banking on Care and Repair",
+  "Vogue Business: Technology - How Digital Product Passports Are Transforming Luxury Craftsmanship",
+  "LVMH Corporate: Heritage & Innovation - Aura Blockchain: Tracing Authenticity and Craftsmanship",
+];
+
+const tags = [
+  "#럭셔리마케팅",
+  "#보테가베네타",
+  "#브랜드전략",
+  "#비스포크워크샵",
+  "#에르메스장인",
+  "#오라블록체인",
+  "#파리패션위크",
+];
 ---
 
-<ArticleLayout {...post}>
-  <h2>패션 위크의 소음 너머, 가죽 냄새가 짙게 배어있던 마베프(Marbeuf)의 아틀리에</h2>
+<ArticleLayout
+  volume="VOL.12"
+  date="2026.09.24"
+  title="완벽한 새것 대신, 낡아가는 시간을 파는 메종들"
+  subtitle="패션 위크의 소음 너머, 가죽 냄새가 짙게 배어있던 마베프(Marbeuf)의 아틀리에"
+  heroImage="/images/vol-12-hero.jpg"
+  heroAlt="Atelier repair craftsmanship and leather patina"
+  heroCaption="본문에 사용된 이미지는 본문의 인사이트를 바탕으로 생성형 AI를 통해 제작된 AI 이미지입니다."
+  references={references}
+  tags={tags}
+>
+
+  <h3>
+    패션 위크의 소음 너머, 가죽 냄새가 짙게 배어있던 마베프(Marbeuf)의 아틀리에
+  </h3>
 
   <p>
     파리 남성 패션 위크 주간이면, 업무상 촬영을 위해 샹젤리제 뒷골목 마베프(Marbeuf) 거리에 자리한 비스포크 워크샵을 자주 찾곤 했어요.
@@ -43,25 +46,33 @@ const post = {
     '아, 어쩌면 저렇게 손때 묻은 시간의 깊이야말로, 새것이 결코 흉내 낼 수 없는 가장 순도 높은 럭셔리가 아닐까.'
   </p>
 
-  <h2>사자마자 낡아버리는 시대, 메종이 '고쳐 쓰는 시간'을 파는 이유</h2>
+  <h2>
+    사자마자 낡아버리는 시대, 메종이 '고쳐 쓰는 시간'을 파는 이유
+  </h2>
 
   <p>
     끊임없이 다음 소비를 부추기는 세상에서, 최근 글로벌 하우스들이 막대한 자원을 들여 '수선(Care & Repair)'과 '평생 관리'를 전면에 내세우는 건 우연이 아니에요. 빠르게 소비되고 버려지는 유행과 선을 긋고, 오랜 시간 이어져 온 브랜드의 헤리티지 안에서 고객과 함께 쌓아가는 '영속적인 관계'를 증명하려는 고도의 브랜딩 전략이죠.
   </p>
 
-  <h3>보테가 베네타(Bottega Veneta)의 평생 보증, '인증서(Certificate of Craft)'</h3>
+  <h3>
+    보테가 베네타(Bottega Veneta)의 평생 보증, '인증서(Certificate of Craft)'
+  </h3>
 
   <p>
     가방을 구매한 고객에게 평생 무상 수선을 약속하는 파격적인 프로그램을 도입했어요. 물건을 손에 쥐여주는 순간 거래가 끝나는 것이 아니라, 고객이 그 가방과 함께 나이 들어가는 평생의 여정을 브랜드가 끝까지 책임지겠다는 선언이죠. 감가상각되는 소모품이 아닌, 대를 이어 물려줄 수 있는 '영원한 자산'임을 증명하는 방식이에요.
   </p>
 
-  <h3>에르메스(Hermès)의 아틀리에 철학과 복원의 미학</h3>
+  <h3>
+    에르메스(Hermès)의 아틀리에 철학과 복원의 미학
+  </h3>
 
   <p>
     "럭셔리란 수선할 수 있는 것이다(Le luxe, c'est ce qui se répare)." 에르메스가 오랜 시간 지켜온 이 철학은 파리 근교 팡탱(Pantin) 아틀리에에서 매일 실현되고 있어요. 수십 년 전 어머니가 들던 켈리 백을 딸이 가져왔을 때, 원래 사용되었던 가죽과 실을 찾아내어 원형 그대로 복원해 내죠. 새 가방을 파는 것보다 낡은 물건을 되살려내는 일이 하우스의 장인정신을 훨씬 단단하게 각인시킵니다.
   </p>
 
-  <h3>LVMH '오라 블록체인(Aura Blockchain)'과 디지털 제품 여권</h3>
+  <h3>
+    LVMH '오라 블록체인(Aura Blockchain)'과 디지털 제품 여권
+  </h3>
 
   <p>
     흥미로운 점은 이 클래식한 수선 철학의 뒤편에서 새로운 기술의 혁신이 조용히 맞물리고 있다는 사실이에요. 제품에 심어진 미세한 칩을 통해 제작 이력부터 장인의 손길을 거친 수선 내역, 소유권의 변화까지 블록체인에 투명하게 기록합니다. 기술이 화려하게 앞장서는 대신, 오랜 시간 이어져 온 헤리티지를 온전히 증명하고 보증해 주는 묵묵한 인프라로 물러서 있는 셈이에요.
@@ -81,7 +92,8 @@ const post = {
     오늘, 여러분의 곁에서 오랜 시간을 묵묵히 함께 건너온 물건은 무엇인가요? 어쩌면 그 작은 흠집 속에 우리가 잊고 지낸 진짜 내 모습이 담겨 있는지도 모르겠습니다.
   </p>
 
-  <p class="article-note">
-    (본문 내 일부 사례는 Bottega Veneta, Hermès, LVMH Aura Blockchain Consortium 등 글로벌 메종의 아카이브 관리 및 지속가능성(Care & Repair) 전략을 바탕으로 구성되었습니다.)
-  </p>
+  <div class="article-note">
+    본문 내 일부 사례는 Bottega Veneta, Hermès, LVMH Aura Blockchain Consortium 등 글로벌 메종의 아카이브 관리 및 지속가능성(Care & Repair) 전략을 바탕으로 구성되었습니다.
+  </div>
+
 </ArticleLayout>
