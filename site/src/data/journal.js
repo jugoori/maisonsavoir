@@ -1,5 +1,14 @@
 export const journalPosts = [
   {
+    volume: "VOL.12",
+    title: "완벽한 새것 대신, 낡아가는 시간을 파는 메종들",
+    date: "2026.10.08",
+    href: "/journal/vol-12",
+    description:
+      "패션 위크의 소음 너머, 가죽 냄새 짙던 마베프 아틀리에에서 마주한 시간의 깊이와 메종의 수선 철학.",
+    heroImage: "/images/vol-12-hero.jpg",
+  },
+  {
     volume: "VOL.11",
     title: "스마트폰 너머, 럭셔리 메종이 책장에 공을 들이는 이유",
     subtitle: "초 단위로 쏟아지는 디지털 피로감 속에서, 책을 펼쳐 드는 '시간의 여유'",
