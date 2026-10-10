@@ -5,7 +5,7 @@ export const journalPosts = [
     subtitle: "AI 시대의 스크린과 하이엔드 메종이 지켜낸 손끝의 체온",
     date: "2026.10.22",
     href: "/journal/special-02",
-    image: "/images/special-02-hero.JPG",
+    image: "/images/special-02-hero.jpg",
   },
     {
     volume: "VOL.12",
