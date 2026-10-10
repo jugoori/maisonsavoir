@@ -1,5 +1,13 @@
 export const journalPosts = [
     {
+    volume: "VOL.13",
+    title: "완벽한 무음보다 값비싼 소리의 질감",
+    subtitle: "인위적인 침묵의 시대, 메종이 귓가에 남겨둔 미세한 마찰음들",
+    date: "2026.11.05",
+    href: "/journal/vol-13",
+    image: "/images/vol-13-hero.jpg",
+  },
+    {
     volume: "SPECIAL VOL.2",
     title: "모두가 프롬프트를 칠 때, 놀란 감독은 왜 거친 바다로 나갔는가",
     subtitle: "AI 시대의 스크린과 하이엔드 메종이 지켜낸 손끝의 체온",
